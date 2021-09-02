@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+
+    <title>
+    </title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="all" />
+<!--
+==================================================================
+CSS
+-->
+<style>
+
+body:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  background:url({image:Background Image}) center no-repeat;
+  background-size: 100% auto;
+}
+/*
+body{
+  background:url({image:Background Image}) center no-repeat;
+  background-size:cover;
+}
+/**/
+</style>
+<!--
+==================================================================
+Appearance Options
+-->
+<script>
+    $(window).on('load resize', function(){
+       
+       $("body").css({"padding-top":$("header").height()});
+        
+    });
+</script>
+
+</head>
+<body id="index" class="home">
+<div id="wrap" class="clearfix">
+
+<header>
+<img src="{image:Header Image}" alt="" />
+</header>
+
+<article>
+<img src="{image:Content Image}" alt="" />
+</article>
+
+</div><!-- /wrap -->
+
+<script>
+/*
+==================================================================
+Interface elements for jQuery
+*/
+$(function(){
+/*
+------------------------------------------------------------------
+scrollTo
+*/
+$(".scrollto a").click(function() {
+    $.scrollTo($($(this).attr("href")), {
+        duration: 'slow'
+    });
+    return false;
+});
+/*
+------------------------------------------------------------------
+lightbox
+*/
+$('.lightbox a, .lightbox').fancybox();
+/*
+==================================================================
+*/
+});
+</script>
+
+</body>
+</html>
