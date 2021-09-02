@@ -1,0 +1,133 @@
+/*
+=================================
+common
+*/
+
+html, body, header, hgroup, footer, article, section, aside, nav, div,
+h1,h2,h3,h4,h5,h6,
+blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+.gothic {
+	font-family: sans-serif;
+}
+.mincho {
+	font-family: serif;
+}
+
+wbr {
+	display: block;
+}
+
+img {
+	vertical-align: bottom;
+	border: 0;
+}
+/*
+a {
+	color: #5aa2cb;
+}
+a:hover {
+	color: #006ba5;
+}
+*/
+ol ,
+ul {
+	margin: 0 0 0 3em;
+	padding: 0;
+}
+ol li ,
+ul li {
+	margin: 0;
+	padding: 0;
+}
+
+address {
+	font-style: normal;
+}
+
+.forsp {
+	display: none;
+}
+
+.hide {
+	display: none;
+}
+
+.furigana {
+	font-size: 0.7em;
+}
+
+.hidden {
+	display: none;
+}
+
+/*
+=================================
+common
+*/
+
+body {
+	color: #333;
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1;
+	text-align: center;
+	word-wrap: break-word;
+	position: relative;
+}
+
+body:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  background-size: 100% auto;
+}
+
+#wrap {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+a {
+	text-decoration: underline;
+	color: #000;
+}
+
+#content a:hover {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.en {
+	font-family: helvetica;
+}
+
+.smaller {
+	font-size: smaller;
+}
+
+strong.invalid {
+	font-weight: normal;
+}
+
+/*
+================================
+*/
+
+#index li {
+    margin: 2em 0;
+    font-size: 60px;
+}
