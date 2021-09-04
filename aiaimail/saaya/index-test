@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="../../files/common.js"></script>
+<link href="../../files/common.css" rel="stylesheet" type="text/css" media="all" />
+
+<script>
+$(function(){
+
+	$("#header").on("click",function(){
+		if( $("#keypad").length ){
+			$("#keypad").fadeOut(30).remove();
+		}else{
+			$('<div id="keypad"><div class="relative"><img src="file:///I:/%E3%83%9E%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96/dragonpoo/d-match-main/files/keypad.png" /><i></i></div></div>')
+			.appendTo("body").hide().fadeIn(30);			
+
+			setInterval(function(){
+				$("#keypad i").fadeOut(300,function(){$(this).fadeIn(300)});
+			},300);
+
+		}
+	});
+});
+
+</script>
+
+  <!--
+==================================================================
+CSS
+-->
+<style>
+#keypad {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+}
+#keypad img {
+	width: 100%;
+	height: auto;
+}
+#keypad i {
+	position: absolute;
+	left: 13%;
+	top: 6%;
+	width: 2px;
+	height: 7%;	
+	border-left: 2px solid #515151;
+}
+</style>
+<!--
+==================================================================
+Appearance Options
+-->
+
+</head>
+<body>
+<div id="wrap" class="clearfix">
+
+<img id="back" src="../img/back.jpg" alt="" />
+
+<header id="header">
+<img src="./img/header.png" alt="" />
+</header>
+
+<article id="content">
+<img src="./img/content.png" alt="" />
+</article>
+
+</div><!-- /wrap -->
+</body>
+</html>
